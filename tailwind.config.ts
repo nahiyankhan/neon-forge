@@ -10,8 +10,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bg: "hsl(var(--theme-bg) / <alpha-value>)",
+
+        textInverse: "hsl(var(--text-inverse) / <alpha-value>)",
+        textProminent: "hsl(var(--text-prominent) / <alpha-value>)",
+        textStandard: "hsl(var(--text-standard) / <alpha-value>)",
+        textSubtle: "hsl(var(--text-subtle) / <alpha-value>)",
+
+        divider: "hsl(var(--border-divider) / <alpha-value>)",
       },
     },
   },

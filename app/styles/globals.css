@@ -3,19 +3,55 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --slate-0: 0deg 0% 100%;
+  --slate-10: 233deg 100% 96%;
+  --slate-20: 233deg 28% 81%;
+  --slate-30: 233deg 22% 41%;
+  --slate-40: 233deg 22% 20%;
+  --slate-50: 233deg 29% 14%;
+  --slate-60: 233deg 14% 11%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --theme-bg: var(--slate-0);
+    --theme-link: 172deg 18% 41%;
+    --theme-text: 203deg 11% 15%;
+    --theme-accent: 351deg 66% 48%;
+    --theme-accent-2: 0deg 0% 7%;
+    --theme-quote: 351deg 66% 48%;
+
+    --text-inverse: black;
+    --text-prominent: var(--slate-40);
+    --text-standard: var(--slate-40);
+    --text-subtle: var(--slate-30);
+
+    --border-divider: var(--slate-20);
+
+    --redact-bg: 0deg 0% 98%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --theme-bg: var(--slate-60);
+    --theme-link: 330deg 49% 67%;
+    --theme-text: 220deg 3% 79%;
+    --theme-accent: 159deg 64% 45%;
+    --theme-accent-2: 0deg 0% 93%;
+    --theme-quote: 102deg 100% 86%;
+
+    --text-inverse: white;
+    --text-prominent: var(--slate-20);
+    --text-standard: var(--slate-10);
+    --text-subtle: var(--slate-10);
+
+    --border-divider: var(--slate-30);
+
+    --redact-bg: 0deg 0% 98%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+* {
+  @apply border-divider;
 }
