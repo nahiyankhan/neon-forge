@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
+import { Props } from "./types";
 
-const t = {
+const firstCharVariants = {
   start: {
     opacity: 0,
+    scale: 0.8,
   },
   end: {
     opacity: 1,
+    scale: 1,
     transition: {
       duration: 0.05,
       ease: "easeInOut",
@@ -14,12 +17,14 @@ const t = {
   },
 };
 
-const he = {
+const restVariants = {
   start: {
     opacity: 0,
+    scale: 0.8,
   },
   end: {
     opacity: 1,
+    scale: 1,
     transition: {
       duration: 0.05,
       ease: "easeInOut",
@@ -28,30 +33,37 @@ const he = {
   },
 };
 
-export const The = (props: any) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    height={"100%"}
-    fill="none"
-    viewBox="0 0 297 100"
-    {...props}
-  >
-    <motion.g id="t" variants={t} initial="start" animate="end">
-      <path
-        d="M32.2727 37.8948C32.2727 36.7903 31.3772 35.8948 30.2727 35.8948H0V0.0170898H125.139L92.9872 35.8948H77.9349C76.8303 35.8948 75.9349 36.7903 75.9349 37.8948V57.7745L39.0784 100.017H32.2727V37.8948Z"
-        fill="currentColor"
-      />
-    </motion.g>
+export const The = ({ className }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height={"100%"}
+      fill="none"
+      viewBox="0 0 344 100"
+      className={className}
+    >
+      <motion.g
+        id="t"
+        variants={firstCharVariants}
+        initial="start"
+        animate="end"
+      >
+        <path
+          d="M21.2727 47.8778C21.2727 46.7732 20.3772 45.8778 19.2727 45.8778H0V0H144L103.664 45.8778H76C74.8954 45.8778 74 46.7732 74 47.8778V88.5L64.0651 100H21.2727V47.8778Z"
+          fill="currentColor"
+        />
+      </motion.g>
 
-    <motion.g id="he" variants={he} initial="start" animate="end">
-      <path
-        d="M138.5 89C138.5 87.8954 139.395 87 140.5 87H155.5C156.605 87 157.5 87.8954 157.5 89L157.5 99.9856L178.5 99.9856L202.305 99.9856V-1.52588e-05L157.5 -2.28882e-05L157.5 11C157.5 12.1045 156.605 13 155.5 13L140.5 13C139.395 13 138.5 12.1045 138.5 11L138.5 -1.52588e-05L130.5 -2.28882e-05L94 41.5V99.9856L103.5 99.9856L116 99.9856L138.5 99.9856L138.5 89Z"
-        fill="currentColor"
-      />
-      <path
-        d="M297 0L207 4.02086e-05V100L297 100V67.4589L254.695 67.4589C253.59 67.4589 252.695 66.5635 252.695 65.4589V64.0652C252.695 62.9606 253.59 62.0652 254.695 62.0652L279.386 62.0652V36.8729L254.695 36.873C253.59 36.873 252.695 35.9775 252.695 34.873V33.7897C252.695 32.6851 253.59 31.7897 254.695 31.7897L297 31.7896V0Z"
-        fill="currentColor"
-      />
-    </motion.g>
-  </svg>
-);
+      <motion.g id="he" variants={restVariants} initial="start" animate="end">
+        <path
+          d="M344 0H232V99.9999L344 99.9999V67.4589L289.809 67.4589C288.705 67.4589 287.809 66.5634 287.809 65.4589V64.0651C287.809 62.9606 288.705 62.0651 289.809 62.0651L314.5 62.0651V36.8729L289.809 36.8729C288.705 36.8729 287.809 35.9775 287.809 34.8729V33.7896C287.809 32.685 288.705 31.7896 289.809 31.7896L344 31.7896V0Z"
+          fill="currentColor"
+        />
+        <path
+          d="M163 89.0125C163 87.9079 163.951 87.0125 165.125 87.0125H179C180.174 87.0125 181.125 87.9079 181.125 89.0125V100H228V6.67677e-06L181.125 0V11.0019C181.125 12.1064 180.174 13.0019 179 13.0019L165.125 13.0019C163.951 13.0019 163 12.1064 163 11.0019L163 6.67677e-06H149L116 37.5V100H163L163 89.0125Z"
+          fill="currentColor"
+        />
+      </motion.g>
+    </svg>
+  );
+};
