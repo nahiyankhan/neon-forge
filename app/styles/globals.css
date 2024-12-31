@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --slate-0: 0deg 0% 100%;
-  --slate-10: 233deg 100% 96%;
-  --slate-20: 233deg 28% 81%;
-  --slate-30: 233deg 22% 41%;
-  --slate-40: 233deg 22% 20%;
-  --slate-50: 233deg 29% 14%;
-  --slate-60: 233deg 14% 11%;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
+    --slate-0: 0deg 0% 100%;
+    --slate-10: 233deg 100% 96%;
+    --slate-20: 233deg 28% 81%;
+    --slate-30: 233deg 22% 41%;
+    --slate-35: 233deg 22% 30%;
+    --slate-40: 233deg 22% 20%;
+    --slate-50: 233deg 29% 14%;
+    --slate-60: 233deg 14% 11%;
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
     --theme-bg: var(--slate-0);
     --theme-link: 172deg 18% 41%;
     --theme-text: 203deg 11% 15%;
@@ -30,10 +32,9 @@
 
     --redact-bg: 0deg 0% 98%;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
+  :root[data-theme="dark"] {
+    color-scheme: dark;
     --theme-bg: var(--slate-60);
     --theme-link: 330deg 49% 67%;
     --theme-text: 220deg 3% 79%;
@@ -46,7 +47,7 @@
     --text-standard: var(--slate-10);
     --text-subtle: var(--slate-10);
 
-    --border-divider: var(--slate-30);
+    --border-divider: var(--slate-35);
 
     --redact-bg: 0deg 0% 98%;
   }
