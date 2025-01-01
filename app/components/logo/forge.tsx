@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Props } from "./types";
+import { Props } from "../types";
 
 const firstCharVariants = {
   start: {

@@ -1,5 +1,20 @@
 import { motion } from "framer-motion";
-import { Props } from "./types";
+import { Props } from "../types";
+
+const variants = {
+  start: {
+    strokeDashoffset: 0,
+    // strokeDasharray: 0,
+  },
+  end: {
+    strokeDashoffset: 100,
+    // strokeDasharray: 100,
+    transition: {
+      // pathLength: { type: "spring", duration: 1.5 },
+      strokeDashoffset: { duration: 2 },
+    },
+  },
+};
 
 export const Cross = ({ className }: Props) => {
   return (
@@ -11,11 +26,15 @@ export const Cross = ({ className }: Props) => {
       preserveAspectRatio="none"
       className={className}
     >
-      <path
-        d="M930.899 1H336.166C328.156 1 320.529 4.43083 315.215 10.4247L50.5 309H930.899"
+      <motion.path
+        d="M315.215 10.4247L50.5 309H930.899V1H336.166C328.156 1 320.529 4.43083 315.215 10.4247Z"
         stroke="currentColor"
-        className="stroke-1"
+        // strokeDasharray={100}
+        // className="stroke-1"
         vectorEffect="non-scaling-stroke"
+        // variants={variants}
+        // initial="start"
+        // animate="end"
       />
 
       {/* <path
