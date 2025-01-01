@@ -1,17 +1,15 @@
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Props } from "./types";
 
 const firstLetter = {
   start: {
-    translateX: "100%",
     opacity: 0,
   },
   end: {
     translateX: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
-      // ease: "easeInOut",
+      duration: 0.01,
       type: "spring",
       bounce: 0.15,
     },
@@ -75,7 +73,6 @@ const remainingLetters = {
     opacity: 1,
     transition: {
       duration: 1,
-      // ease: "easeInOut",
       type: "spring",
       bounce: 0.15,
       delay: 3,
@@ -94,59 +91,18 @@ export const WTF = ({ className }: Props) => {
     >
       <g>
         <clipPath id="clip-left">
-          <path d="M0.500063 1L0.499969 857.522H141.601L880.84 23.1102C890.521 11.9529 907.221 1.00008 929.2 1.00008L0.500063 1Z" />
+          <path d="M0.500063 1L0.499969 857.522H127.97L885.573 1H0.500063Z" />
         </clipPath>
       </g>
 
       <g>
         <clipPath id="clip-right">
-          <path d="M881.318 21.5602L141.608 856.522H1920V0H929.222C910.904 0 893.465 7.84902 881.318 21.5602Z" />
+          <path d="M881.318 22.5602L141.608 857.522H1920V1H929.222C910.904 1 893.465 8.84902 881.318 22.5602Z" />
         </clipPath>
       </g>
 
       <g id="wtf">
         <g id="forge">
-          {/* <g id="forge_special_chars">
-            <g id="question">
-              <path
-                id="question_2"
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M1738.71 583.275C1738.71 581.066 1736.91 579.275 1734.71 579.275L1558.35 579.275L1558.35 667.686H1606.64C1616.1 667.686 1621.24 679.28 1615.12 686.505L1558.35 751.582H1665.35L1738.71 667.686V583.275Z"
-                fill="currentColor"
-              />
-              <circle
-                id="period"
-                cx="1603.51"
-                cy="812.027"
-                r="45.1609"
-                fill="currentColor"
-              />
-            </g>
-            <g id="exclamation">
-              <path
-                id="exclamation_2"
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M1855.43 751.581V583.275C1855.43 581.066 1853.64 579.275 1851.43 579.275H1749.82V751.581H1855.43Z"
-                fill="currentColor"
-              />
-              <circle
-                id="period_2"
-                cx="1794.98"
-                cy="812.027"
-                r="45.1609"
-                fill="currentColor"
-              />
-            </g>
-            <circle
-              id="period_3"
-              cx="1603.71"
-              cy="812.362"
-              r="45.1591"
-              fill="currentColor"
-            />
-          </g> */}
           <g clipPath="url(#clip-left)">
             <motion.path
               id="f"
@@ -187,15 +143,6 @@ export const WTF = ({ className }: Props) => {
           </g>
         </g>
         <g id="the">
-          {/* <g id="the_special_chars">
-            <circle
-              id="period_4"
-              cx="1214.08"
-              cy="522.97"
-              r="45.1591"
-              fill="currentColor"
-            />
-          </g> */}
           <g clipPath="url(#clip-right)">
             <motion.g variants={remainingLetters} initial="start" animate="end">
               <path
@@ -230,7 +177,6 @@ export const WTF = ({ className }: Props) => {
             >
               <motion.path
                 id="t"
-                // d="M315.472 423.117C315.472 420.044 312.984 417.552 309.914 417.552H256.359V289.899H629.209L517.123 417.552H467.55C464.481 417.552 461.992 420.044 461.992 423.117V480.12L384.105 568.146H315.472V423.117Z"
                 d="M59.1132 423.117C59.1132 420.044 56.625 417.552 53.5556 417.552H0V289.899H372.851L260.764 417.552H211.191C208.122 417.552 205.634 420.044 205.634 423.117V480.12L127.747 568.146H59.1132V423.117Z"
                 fill="currentColor"
                 variants={t}
@@ -255,45 +201,6 @@ export const WTF = ({ className }: Props) => {
           </g>
         </g>
         <g id="what">
-          {/* <g id="what_special_chars">
-            <g id="dot_dot_dot">
-              <circle
-                id="period_5"
-                cx="1315.78"
-                cy="233.61"
-                r="45.1591"
-                fill="currentColor"
-              />
-              <circle
-                id="period_6"
-                cx="1417.21"
-                cy="233.61"
-                r="45.1591"
-                fill="currentColor"
-              />
-              <circle
-                id="period_7"
-                cx="1518.65"
-                cy="233.61"
-                r="45.1591"
-                fill="currentColor"
-              />
-            </g>
-            <path
-              id="comma"
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M1397.67 192.451C1397.67 190.242 1395.78 188.451 1393.57 188.451C1317.48 188.451 1375.87 188.451 1295 188.451L1214.1 278.703H1263.39C1273.05 278.703 1278.3 290.538 1272.06 297.913L1238.38 335.791H1347.6L1397.67 278.703V192.451Z"
-              fill="currentColor"
-            />
-            <circle
-              id="period_8"
-              cx="1315.78"
-              cy="233.61"
-              r="45.1591"
-              fill="currentColor"
-            />
-          </g> */}
           <g clipPath="url(#clip-right)">
             <motion.g variants={remainingLetters} initial="start" animate="end">
               <path
@@ -319,7 +226,7 @@ export const WTF = ({ className }: Props) => {
             />
             <motion.path
               id="h_2"
-              d="M565.213 31.0941C565.213 34.1675 562.565 36.659 559.299 36.659L520.693 36.659C517.427 36.659 514.78 34.1675 514.78 31.0941V0.521745L384.352 0.521734L384.352 278.768L514.78 278.768V248.156C514.78 245.083 517.427 242.591 520.693 242.591L559.299 242.591C562.565 242.591 565.213 245.083 565.213 248.156L565.213 278.768H637.557L695.989 212.574V0.52174L565.213 0.521729L565.213 31.0941Z"
+              d="M565.213 31.0941C565.213 34.1675 562.565 36.659 559.299 36.659L520.693 36.659C517.427 36.659 514.78 34.1675 514.78 31.0941V0.521745L384.352 0.521734L384.352 278.768L514.78 278.768V248.156C514.78 245.083 517.427 242.591 520.693 242.591L559.299 242.591C562.565 242.591 565.213 245.083 565.213 248.156L565.213 278.768H639.37L695.989 215.202V0.52174L565.213 0.521729L565.213 31.0941Z"
               fill="currentColor"
               variants={{
                 ...remainingLetters,
@@ -335,8 +242,16 @@ export const WTF = ({ className }: Props) => {
         </g>
         <g id="cross" className="text-divider">
           <motion.path
-            id="cross_2"
+            id="cross_right"
             d="M1920 1H929.222C910.905 1 893.465 8.84902 881.318 22.5602L141.608 857.522H1920"
+            stroke="currentColor"
+            variants={cross}
+            initial="start"
+            animate="end"
+          />
+          <motion.path
+            id="cross_left"
+            d="M0 1L885.715 1.00016L126.905 857.522H0"
             stroke="currentColor"
             variants={cross}
             initial="start"
