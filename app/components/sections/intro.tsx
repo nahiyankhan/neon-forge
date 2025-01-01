@@ -1,11 +1,14 @@
 "use client";
 
 import { What, The, Forge, Cross } from "../logo";
+import { WTF } from "../wtf";
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col h-screen items-start justify-center gap-2 text-textProminent relative">
-      <div className="w-full">
+    <div className="flex h-screen items-center text-textProminent relative">
+      <WTF />
+
+      {/* <div className="w-full">
         <What className="h-[calc(80vh/3)]" />
       </div>
       <div className="w-full">
@@ -19,7 +22,7 @@ export const Intro = () => {
         <div className="text-divider w-max">
           <Cross className="w-full h-[calc(80vh+22px)]" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
