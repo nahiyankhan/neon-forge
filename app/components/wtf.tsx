@@ -72,13 +72,14 @@ const remainingLetters = {
     translateX: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.5,
       type: "spring",
       bounce: 0.15,
-      delay: 3,
     },
   },
 };
+
+const remainingLettersDelays = [3, 3.5, 4];
 
 export const WTF = ({ className }: Props) => {
   return (
@@ -114,7 +115,20 @@ export const WTF = ({ className }: Props) => {
             />
           </g>
           <g clipPath="url(#clip-right)">
-            <motion.g variants={remainingLetters} initial="start" animate="end">
+            <motion.g
+              variants={{
+                ...remainingLetters,
+                end: {
+                  ...remainingLetters.end,
+                  transition: {
+                    ...remainingLetters.end.transition,
+                    delay: remainingLettersDelays[2],
+                  },
+                },
+              }}
+              initial="start"
+              animate="end"
+            >
               <path
                 id="o"
                 fillRule="evenodd"
@@ -144,7 +158,20 @@ export const WTF = ({ className }: Props) => {
         </g>
         <g id="the">
           <g clipPath="url(#clip-right)">
-            <motion.g variants={remainingLetters} initial="start" animate="end">
+            <motion.g
+              variants={{
+                ...remainingLetters,
+                end: {
+                  ...remainingLetters.end,
+                  transition: {
+                    ...remainingLetters.end.transition,
+                    delay: remainingLettersDelays[1],
+                  },
+                },
+              }}
+              initial="start"
+              animate="end"
+            >
               <path
                 id="e_2"
                 d="M1157.88 289.899H874.066V568.146L1157.88 568.146V477.601L1030.62 477.601C1029.52 477.601 1028.62 476.706 1028.62 475.601V464.593C1028.62 463.489 1029.52 462.593 1030.62 462.593L1102.54 462.593V392.497L1030.62 392.497C1029.52 392.497 1028.62 391.601 1028.62 390.497V380.353C1028.62 379.248 1029.52 378.353 1030.62 378.353L1157.88 378.353V289.899Z"
@@ -165,10 +192,10 @@ export const WTF = ({ className }: Props) => {
                   opacity: 1,
                   translateX: "-100%",
                   transition: {
-                    duration: 1,
+                    duration: 0.5,
                     type: "spring",
                     bounce: 0.15,
-                    delay: 3,
+                    delay: 3.5,
                   },
                 },
               }}
@@ -194,6 +221,13 @@ export const WTF = ({ className }: Props) => {
                   ...remainingLetters.start,
                   translateX: "100%",
                 },
+                end: {
+                  ...remainingLetters.end,
+                  transition: {
+                    ...remainingLetters.end.transition,
+                    delay: remainingLettersDelays[1],
+                  },
+                },
               }}
               initial="start"
               animate="end"
@@ -202,7 +236,20 @@ export const WTF = ({ className }: Props) => {
         </g>
         <g id="what">
           <g clipPath="url(#clip-right)">
-            <motion.g variants={remainingLetters} initial="start" animate="end">
+            <motion.g
+              variants={{
+                ...remainingLetters,
+                end: {
+                  ...remainingLetters.end,
+                  transition: {
+                    ...remainingLetters.end.transition,
+                    delay: remainingLettersDelays[0],
+                  },
+                },
+              }}
+              initial="start"
+              animate="end"
+            >
               <path
                 id="t_2"
                 d="M1093.33 133.74C1093.33 130.666 1090.84 128.175 1087.77 128.175H1034.14V0.521729H1407.48L1295.25 128.175H1245.61C1242.54 128.175 1240.05 130.666 1240.05 133.74V190.743L1162.06 278.768H1093.33V133.74Z"
@@ -233,6 +280,13 @@ export const WTF = ({ className }: Props) => {
                 start: {
                   ...remainingLetters.start,
                   translateX: "100%",
+                },
+                end: {
+                  ...remainingLetters.end,
+                  transition: {
+                    ...remainingLetters.end.transition,
+                    delay: remainingLettersDelays[0],
+                  },
                 },
               }}
               initial="start"

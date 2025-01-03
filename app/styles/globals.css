@@ -43,9 +43,9 @@
     --theme-quote: 102deg 100% 86%;
 
     --text-inverse: white;
-    --text-prominent: var(--slate-20);
-    --text-standard: var(--slate-10);
-    --text-subtle: var(--slate-10);
+    --text-prominent: var(--slate-10);
+    --text-standard: var(--slate-20);
+    --text-subtle: var(--slate-30);
 
     --border-divider: var(--slate-35);
 

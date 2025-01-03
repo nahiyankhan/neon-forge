@@ -2,11 +2,10 @@
 
 export const About = () => {
   return (
-    <div className="w-full">
+    <div className="w-full pt-40 pb-60 text-textStandard">
       <div className="font-mono">THE FORGE</div>
-      <div className="mb-2">/fôrj/</div>
-      <div className="w-1/4 border-b mb-2"></div>
-      <div>place to craft (something) strong, enduring</div>
+      <div className="mb-2 pb-2 border-b">/fôrj/</div>
+      <div className="">place to craft (something) strong, enduring</div>
     </div>
   );
 };
