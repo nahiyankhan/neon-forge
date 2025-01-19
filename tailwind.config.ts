@@ -45,7 +45,25 @@ export default {
             color: "transparent",
             opacity: "1",
           },
-          "80%": {
+          "85%": {
+            strokeDashoffset: "0",
+            stroke: "hsl(var(--border-divider) / 1)",
+            color: "transparent",
+            opacity: "1",
+          },
+          "90%": {
+            strokeDashoffset: "0",
+            stroke: "transparent",
+            color: "hsl(var(--text-standard) / 1)",
+            opacity: "1",
+          },
+          "92.5%": {
+            strokeDashoffset: "0",
+            stroke: "hsl(var(--border-divider) / 1)",
+            color: "transparent",
+            opacity: "1",
+          },
+          "95%": {
             strokeDashoffset: "0",
             stroke: "hsl(var(--border-divider) / 1)",
             color: "transparent",

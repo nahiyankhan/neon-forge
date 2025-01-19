@@ -16,7 +16,7 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="relative bg-bgApp flex overflow-hidden h-12 w-12 flex-row items-center justify-center rounded-full border border-divider transition-all"
+      className="relative bg-bg flex overflow-hidden h-12 w-12 flex-row items-center justify-center rounded-full border border-divider transition-all"
     >
       <svg
         width="24"
